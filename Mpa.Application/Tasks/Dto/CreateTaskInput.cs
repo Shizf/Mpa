@@ -15,7 +15,6 @@ namespace Mpa.Tasks.Dto
         public virtual int? AssignedPersonId { get; set; }
 
         [Required(ErrorMessage = "描述必填")]
-        [AllowHtml]
         public virtual string Description { get; set; }
 
         public virtual DateTime CreationTime { get; set; }
