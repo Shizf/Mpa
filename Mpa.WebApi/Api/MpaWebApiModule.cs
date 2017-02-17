@@ -15,7 +15,7 @@ namespace Mpa.Api
             IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());
 
             Configuration.Modules.AbpWebApi().DynamicApiControllerBuilder
-                .ForAll<IApplicationService>(typeof(MpaApplicationModule).Assembly, "App")
+                .ForAll<IApplicationService>(typeof(MpaApplicationModule).Assembly, "app")
                 .Build();
 
             Configuration.Modules.AbpWebApi().HttpConfiguration.Filters.Add(new HostAuthenticationFilter("Bearer"));
